@@ -23,8 +23,8 @@ public class SystemBookLibraryTest
         library.AddBook(new Book("Война и мир", "Л. Н. Толстой"));
         library.AddBook(new Book("Мастер и Маргарита", "М. А. Булгаков"));
         //Act
-        string? title = library.FindBook("Лолита");
+        Book? book = library.FindBook("Лолита");
         //Assert
-        Assert.Null(title);
+        Assert.Null(book);
     }
 }

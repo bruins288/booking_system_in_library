@@ -51,6 +51,6 @@ public class Book
     /// </summary>
     public void DisplayStatus()
     {
-        Console.WriteLine($"Книга {Title} автора {Author} забронирована? {IsAvailable}");
+        Console.WriteLine($"Книга {Title} автора {Author} доступна? {IsAvailable}");
     }  
 }

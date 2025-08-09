@@ -1,0 +1,12 @@
+d:\projects\CS\booking_system_in_library\SystemBookLibrary\bin\Debug\net9.0\SystemBookLibrary.deps.json
+d:\projects\CS\booking_system_in_library\SystemBookLibrary\bin\Debug\net9.0\SystemBookLibrary.dll
+d:\projects\CS\booking_system_in_library\SystemBookLibrary\bin\Debug\net9.0\SystemBookLibrary.pdb
+d:\projects\CS\booking_system_in_library\SystemBookLibrary\obj\Debug\net9.0\SystemBookLibrary.GeneratedMSBuildEditorConfig.editorconfig
+d:\projects\CS\booking_system_in_library\SystemBookLibrary\obj\Debug\net9.0\SystemBookLibrary.AssemblyInfoInputs.cache
+d:\projects\CS\booking_system_in_library\SystemBookLibrary\obj\Debug\net9.0\SystemBookLibrary.AssemblyInfo.cs
+d:\projects\CS\booking_system_in_library\SystemBookLibrary\obj\Debug\net9.0\SystemBookLibrary.csproj.CoreCompileInputs.cache
+d:\projects\CS\booking_system_in_library\SystemBookLibrary\obj\Debug\net9.0\SystemBookLibrary.sourcelink.json
+d:\projects\CS\booking_system_in_library\SystemBookLibrary\obj\Debug\net9.0\SystemBookLibrary.dll
+d:\projects\CS\booking_system_in_library\SystemBookLibrary\obj\Debug\net9.0\refint\SystemBookLibrary.dll
+d:\projects\CS\booking_system_in_library\SystemBookLibrary\obj\Debug\net9.0\SystemBookLibrary.pdb
+d:\projects\CS\booking_system_in_library\SystemBookLibrary\obj\Debug\net9.0\ref\SystemBookLibrary.dll

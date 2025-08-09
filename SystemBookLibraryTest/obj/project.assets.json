@@ -991,8 +991,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\projects\\CS\\booking_system_in_library\\SystemBookLibrary\\SystemBookLibrary.csproj": {
-              "projectPath": "D:\\projects\\CS\\booking_system_in_library\\SystemBookLibrary\\SystemBookLibrary.csproj"
+            "d:\\projects\\CS\\booking_system_in_library\\SystemBookLibrary\\SystemBookLibrary.csproj": {
+              "projectPath": "d:\\projects\\CS\\booking_system_in_library\\SystemBookLibrary\\SystemBookLibrary.csproj"
             }
           }
         }

@@ -40,13 +40,14 @@ public class Library(int countOfBooks = 10)
     /// </summary>
     /// <param name="title">Название книги</param>
     /// <returns>ВВозвращает название книги, если книга не найдена возвращает null</returns>
-    public string? FindBook(string title)
+    public Book? FindBook(string title)
     {
+        
         foreach (var book in _books)
         {
-            if (book.Title == title)
+            if (book?.Title == title)
             {
-                return book.Title;
+                return book;
             }
         }
         return null;
