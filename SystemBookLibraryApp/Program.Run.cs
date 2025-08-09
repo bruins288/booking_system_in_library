@@ -45,9 +45,8 @@ internal partial class Program
     }
     private static void BorrowBook(string? title)
     {
-        ArgumentNullException.ThrowIfNullOrWhiteSpace(title);
 
-        Book? foundedBook = library.FindBook(title);
+        Book? foundedBook = FindBookByTitle(title);
         if (foundedBook is null)
         {
             DisplayMessage("Бронь! Увы такой книги у нас нет!", ConsoleColor.Magenta);
@@ -70,18 +69,21 @@ internal partial class Program
     }
     private static void ReturnBook(string? title)
     {
-        ArgumentException.ThrowIfNullOrWhiteSpace(title);
-
-        Book? foundedBook = library.FindBook(title);
+        Book? foundedBook = FindBookByTitle(title);
         if (foundedBook is null)
         {
-            DisplayMessage("Возврат! Увы такой книги у нас нет!", ConsoleColor.Magenta);           
+            DisplayMessage("Возврат! Увы такой книги у нас нет!", ConsoleColor.Magenta);
         }
         else
-        {            
+        {
             foundedBook.Return();
             DisplayMessage("Книга Возвращена!", ConsoleColor.Green);
             foundedBook.DisplayStatus();
         }
+    }
+    private static Book? FindBookByTitle(string? title)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(title);
+        return library.FindBook(title);
     }
 }
