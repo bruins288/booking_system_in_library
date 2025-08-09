@@ -7,11 +7,11 @@ public class Book
     /// <summary>
     /// Название книги
     /// </summary>
-    public string? Title { get; private set; }
+    public string Title { get; private set; }
     /// <summary>
     /// Автор книги
     /// </summary>
-    public string? Author { get; private set; }
+    public string Author { get; private set; }
     /// <summary>
     /// Показывает забронирована ли книга
     /// </summary>
