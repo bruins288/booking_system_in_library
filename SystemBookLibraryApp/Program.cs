@@ -8,7 +8,15 @@ try
     BorrowBook(input);
     ReturnBook(input);
 }
-catch (ArgumentNullException ex)
+catch (ArgumentException ex)
+{
+    DisplayMessage(ex.Message, ConsoleColor.Red);
+}
+catch (InvalidOperationException ex)
+{
+    DisplayMessage(ex.Message, ConsoleColor.Red);
+}
+catch (KeyNotFoundException ex)
 {
     DisplayMessage(ex.Message, ConsoleColor.Red);
 }

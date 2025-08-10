@@ -36,50 +36,30 @@ internal partial class Program
         }
         catch (ArgumentException ex)
         {
-            Console.WriteLine(ex.Message);
-        }
+            DisplayMessage(ex.Message, ConsoleColor.Red);
+        }        
         catch (InvalidOperationException ex)
         {
-            Console.WriteLine(ex.Message);
+            DisplayMessage(ex.Message, ConsoleColor.Red);
         }
     }
     private static void BorrowBook(string? title)
     {
 
-        Book? foundedBook = FindBookByTitle(title);
-        if (foundedBook is null)
+        Book? foundedBook = FindBookByTitle(title) ?? throw new KeyNotFoundException("Книга не найдена");
+        if (!foundedBook.IsAvailable)
         {
-            DisplayMessage("Бронь! Увы такой книги у нас нет!", ConsoleColor.Magenta);
-            DisplayMessage("Попробуйте другую книгу", color: ConsoleColor.White);
+            throw new InvalidOperationException("Книга уже занята");
         }
-        else
-        {
-            DisplayMessage($"Книга {foundedBook.Title} найдена!", ConsoleColor.Green);
-            try
-            {
-                foundedBook.Borrow();
-                DisplayMessage("Книга забронирована!", ConsoleColor.Green);
-                foundedBook.DisplayStatus();
-            }
-            catch (InvalidOperationException ex)
-            {
-                DisplayMessage(ex.Message, ConsoleColor.Red);
-            }
-        }
+        foundedBook.Borrow();
+        DisplayMessage("Книга забронирована.", ConsoleColor.Green);
     }
     private static void ReturnBook(string? title)
     {
-        Book? foundedBook = FindBookByTitle(title);
-        if (foundedBook is null)
-        {
-            DisplayMessage("Возврат! Увы такой книги у нас нет!", ConsoleColor.Magenta);
-        }
-        else
-        {
-            foundedBook.Return();
-            DisplayMessage("Книга Возвращена!", ConsoleColor.Green);
-            foundedBook.DisplayStatus();
-        }
+        Book? foundedBook = FindBookByTitle(title) ?? throw new KeyNotFoundException("Книга не найдена");
+        foundedBook.Return();
+        DisplayMessage("Книга возвращена", ConsoleColor.Green);
+
     }
     private static Book? FindBookByTitle(string? title)
     {
